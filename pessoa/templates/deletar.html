@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% load widget_tweaks %}
+
+{%block main%}
+
+<form class="form-horizontal" role="form" method="post" >
+       {%csrf_token%}
+
+       <div class="row">
+	       <div class="col-sm-6">
+	          <div class="form-group {% if field.errors %} has-error {%endif%}">
+	          <label for="id_pessoa_nome"
+	                 class="col-sm-2 control-label">{{form.pessoa_nome.label}}</label>
+	                 {% render_field form.pessoa_nome class='form-control'%}
+	                 {% for error in form.pessoa_nome.errors %}
+	                    <span class="help-block">{{error}}</span>
+	                 {% endfor %}
+	          </div>
+	       </div>
+		   <div class="col-sm-6">
+	          <div class="form-group {% if field.errors %} has-error {%endif%}">
+	          <label for="id_estado_nome"
+	                 class="col-sm-2 control-label">{{form.pessoa_logradouro.label}}</label>
+	                 {% render_field form.pessoa_logradouro class='form-control'%}
+	                 {% for error in form.pessoa_logradouro.errors %}
+	                    <span class="help-block">{{error}}</span>
+	                 {% endfor %}
+	          </div>
+	       </div>
+		   <div class="col-sm-6">
+	          <div class="form-group {% if field.errors %} has-error {%endif%}">
+	          <label for="id_cidade_nome"
+	                 class="col-sm-2 control-label">{{form.pessoa_logradouro.label}}</label>
+	                 {% render_field form.pessoa_logradouro class='form-control'%}
+	                 {% for error in form.pessoa_logradouro.errors %}
+	                    <span class="help-block">{{error}}</span>
+	                 {% endfor %}
+	          </div>
+	       </div>
+	       <div class="col-sm-6">
+	          <div class="form-group {% if field.errors %} has-error {%endif%}">
+	          <label for="id_pessoa_logradouro"
+	                 class="col-sm-2 control-label">{{form.pessoa_logradouro.label}}</label>
+	                 {% render_field form.pessoa_logradouro class='form-control'%}
+	                 {% for error in form.pessoa_logradouro.errors %}
+	                    <span class="help-block">{{error}}</span>
+	                 {% endfor %}
+	          </div>
+	       </div>
+		   <div class="col-sm-6">
+	          <div class="form-group {% if field.errors %} has-error {%endif%}">
+	          <label for="id_pessoa_numero"
+	                 class="col-sm-2 control-label">{{form.pessoa_numero.label}}</label>
+	                 {% render_field form.pessoa_numero class='form-control'%}
+	                 {% for error in form.pessoa_numero.errors %}
+	                    <span class="help-block">{{error}}</span>
+	                 {% endfor %}
+	          </div>
+	       </div>
+		   <div class="col-sm-6">
+	          <div class="form-group {% if field.errors %} has-error {%endif%}">
+	          <label for="id_contato_telefone"
+	                 class="col-sm-2 control-label">{{form.contato_telefone.label}}</label>
+	                 {% render_field form.contato_telefone class='form-control'%}
+	                 {% for error in form.contato_telefone.errors %}
+	                    <span class="help-block">{{error}}</span>
+	                 {% endfor %}
+	          </div>
+	       </div>
+       </div>
+
+
+       <div class="row">
+          <div class="form-group">
+	          <div class="offset-sm-2">
+	              <button type="submit"
+	                      class="btn btn-primary">Deletar!</button>
+	          </div>
+          </div>
+      </div>
+  </form>
+
+{%endblock%}

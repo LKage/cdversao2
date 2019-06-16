@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Title</title>
+</head>
+<body class="container">
+<div class="jumbotron">
+  <div class="page-header">
+      <h2>Cadastro</h2>
+  </div>
+  <form class="form-horizontal" role="form" method="post" >
+      <div class="row">
+          <div class="col-sm-10">
+              <div class="form-group">
+                    <label for="pessoa_nome"
+                           class="control-label">Nome</label>
+                    <input id="pessoa_nome"
+                           type="text"
+                           name="pessoa_nome"
+                           value="{{ pessoa_nome }}"
+                           class="form-control" />
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="offset-sm-2">
+              <button type="submit"
+                      class="btn btn-primary">Salvar</button>
+          </div>
+      </div>
+  </form>
+</div>
+</body>
+</html>
