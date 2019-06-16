@@ -1,0 +1,12 @@
+.trash-item {
+    float: right;
+}
+
+.conteudo {
+  min-height: 250px;
+  padding: 50px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 450px;
+
+}
